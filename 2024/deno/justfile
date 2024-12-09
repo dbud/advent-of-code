@@ -1,0 +1,12 @@
+create day:
+    cp -r daily-template/ {{day}}
+    just get-input {{day}}
+
+get-input day:
+    deno run --allow-env --allow-read --allow-net get_input.ts {{day}} >{{day}}/input.txt
+
+test day:
+    cd {{day}} && deno test --watch
+
+solve day part:
+    deno task --cwd {{day}} {{part}}
