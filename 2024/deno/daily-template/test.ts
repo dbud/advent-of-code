@@ -8,7 +8,7 @@ Deno.test(async function examplePart1() {
   assertEquals(
     await part1(from`\
     `),
-    0,
+    undefined,
   );
 });
 
@@ -16,7 +16,7 @@ Deno.test(async function examplePart2() {
   assertEquals(
     await part2(from`\
     `),
-    0,
+    undefined,
   );
 });
 
