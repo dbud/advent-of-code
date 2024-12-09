@@ -1,3 +1,16 @@
 # Advent of Code
 
 My solutions for the [Advent of Code](http://adventofcode.com/)
+
+## 2024
+To celebrate [Deno](https://deno.com) hitting [2.0](https://deno.com/blog/v2.0), I decided to use it to solve this year’s Advent of Code.
+
+Prerequisites:
+* `brew install deno`
+* `brew install just`
+
+Daily workflow:
+1. `just create day-xx` creates a new deno project for the day and downloads the input (put your session cookie into `.env` as `AOC_SESSION="..."`)
+1. `just test day-xx` runs tests in watch mode (put examples for part 1 and part 2 in `day-xx/test.ts`)
+1. Solve the puzzle 😊 in `day-xx/mod.ts`
+1. `just solve part1` / `just solve part2` runs the solution using the input.
