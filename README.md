@@ -5,6 +5,23 @@ My solutions for the [Advent of Code](http://adventofcode.com/)
 ## 2024
 To celebrate [Deno](https://deno.com) hitting [2.0](https://deno.com/blog/v2.0), I decided to use it to solve this year’s Advent of Code.
 
+```
+Progress:
+          .-----.          .------------------.
+       .--'~ ~ ~|        .-' *       \  /     '-.   1 **
+    .--'~  ,* ~ |        |  >o<   \_\_\|_/__/   |   2 **
+.---': ~ '(~), ~|        | >@>O< o-_/.()__------|   3 **
+|#..#'. ~ " ' ~ |        |>O>o<@< \____       .'|   4 **
+|_.~._#'.. ~ ~ *|        | _| |_    ..\_\_ ..'* |   5 **
+| ||| @  @'''...|        |...     .'  '.'''../..|   6 **
+|#~~~##@# @   @ |        |/\ ''.  |    |   -/  :|   7 **
+|~~..--. _____  |        |* /~\ '.|    | - /  .'|   8 **
+'---'  ||[][]_\-|        |~/ * \ :|    |  *..'  |   9 **
+       |------- |        |   /\ .'|    |'''~~~~~|  10 **
+       |.......||        |/\ ..'  |    |   . .  |  11 **
+       |  -  -  |        |''':::::|    |  .    .|  12 **
+```
+
 Prerequisites:
 * `brew install deno`
 * `brew install just`
