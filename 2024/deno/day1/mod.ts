@@ -3,7 +3,7 @@ import { sum, zip } from "jsr:@es-toolkit/es-toolkit";
 const parse = async (input: ReadableStream<string>) => {
   const a = [], b = [];
   for await (const line of input) {
-    const [x, y] = line.split(/\s+/).map((x) => parseInt(x, 10));
+    const [x, y] = line.split(/\s+/).map(Number);
     a.push(x);
     b.push(y);
   }

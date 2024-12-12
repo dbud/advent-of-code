@@ -9,7 +9,7 @@ async function parse(
   const deps = new Map<number, Set<number>>();
   lines.slice(0, empty)
     .map((line) => line.split("|"))
-    .map((pair) => pair.map((x) => parseInt(x, 10)))
+    .map((pair) => pair.map(Number))
     .forEach(([a, b]) => {
       if (deps.has(a)) deps.get(a)?.add(b);
       else deps.set(a, new Set([b]));
@@ -17,7 +17,7 @@ async function parse(
 
   const reports = lines.slice(empty + 1)
     .map((line) => line.split(","))
-    .map((parts) => parts.map((x) => parseInt(x, 10)));
+    .map((parts) => parts.map(Number));
 
   return [deps, reports];
 }

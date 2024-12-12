@@ -4,7 +4,7 @@ async function parse(
   input: ReadableStream<string>,
 ): Promise<[number, number, number[]]> {
   const grid = (await Array.fromAsync(input)).map((line) =>
-    [...line].map((x) => parseInt(x, 10))
+    [...line].map(Number)
   );
   return [grid.length, grid[0].length, grid.flat()];
 }

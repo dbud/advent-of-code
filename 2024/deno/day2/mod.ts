@@ -1,6 +1,6 @@
 async function parse(input: ReadableStream<string>) {
   return (await Array.fromAsync(input)).map((line) =>
-    line.split(/\s+/).map((x) => parseInt(x, 10))
+    line.split(/\s+/).map(Number)
   );
 }
 

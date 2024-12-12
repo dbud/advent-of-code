@@ -2,7 +2,7 @@ import { toText } from "jsr:@std/streams/to-text";
 import { sum } from "jsr:@es-toolkit/es-toolkit";
 
 async function parse(input: ReadableStream<string>) {
-  return (await toText(input)).split(/\s+/).map((x) => parseInt(x, 10));
+  return (await toText(input)).split(/\s+/).map(Number);
 }
 
 function count(n: number, depth: number): number {
@@ -12,8 +12,8 @@ function count(n: number, depth: number): number {
 
   const s = n.toString();
   if (s.length % 2 === 0) {
-    const l = parseInt(s.slice(0, s.length / 2), 10);
-    const r = parseInt(s.slice(s.length / 2), 10);
+    const l = Number(s.slice(0, s.length / 2));
+    const r = Number(s.slice(s.length / 2));
     return count(l, depth - 1) + count(r, depth - 1);
   } else return count(n * 2024, depth - 1);
 }
@@ -41,9 +41,9 @@ function iterate(numbers: Map<number, number>): Map<number, number> {
     } else {
       const s = n.toString();
       if (s.length % 2 === 0) {
-        const l = parseInt(s.slice(0, s.length / 2), 10);
+        const l = Number(s.slice(0, s.length / 2));
         add(m, l, k);
-        const r = parseInt(s.slice(s.length / 2), 10);
+        const r = Number(s.slice(s.length / 2));
         add(m, r, k);
       } else {
         add(m, n * 2024, k);

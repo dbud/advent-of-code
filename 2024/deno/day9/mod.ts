@@ -15,7 +15,7 @@ type Span = {
 };
 
 async function parse(input: ReadableStream<string>) {
-  const { spans } = [...await toText(input)].map((x) => parseInt(x, 10))
+  const { spans } = [...await toText(input)].map(Number)
     .reduce(({ pos, spans }, width, index) => {
       return {
         spans: spans.concat([

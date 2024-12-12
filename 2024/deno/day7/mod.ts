@@ -4,7 +4,7 @@ async function parse(
   input: ReadableStream<string>,
 ): Promise<[number, number[]][]> {
   return (await Array.fromAsync(input))
-    .map((line) => line.split(/:?\s+/).map((x) => parseInt(x, 10)))
+    .map((line) => line.split(/:?\s+/).map(Number))
     .map(([target, ...values]) => [target, values]);
 }
 
@@ -29,7 +29,7 @@ function evaluate(values: number[], ops: string[]): number {
         case "*":
           return lhs * rhs;
         case "||":
-          return parseInt(`${lhs}${rhs}`, 10);
+          return Number(`${lhs}${rhs}`);
         default:
           return lhs;
       }
