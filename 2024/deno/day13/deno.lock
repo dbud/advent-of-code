@@ -1,0 +1,60 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@es-toolkit/es-toolkit@*": "1.29.0",
+    "jsr:@es-toolkit/es-toolkit@^1.29.0": "1.29.0",
+    "jsr:@qnighy/dedent@*": "0.1.2",
+    "jsr:@qnighy/dedent@~0.1.2": "0.1.2",
+    "jsr:@seacrest/option-result-rs@*": "0.1.1",
+    "jsr:@seacrest/option-result-rs@~0.1.1": "0.1.1",
+    "jsr:@std/assert@*": "1.0.9",
+    "jsr:@std/assert@^1.0.9": "1.0.9",
+    "jsr:@std/bytes@^1.0.3": "1.0.4",
+    "jsr:@std/cli@^1.0.8": "1.0.8",
+    "jsr:@std/internal@^1.0.5": "1.0.5",
+    "jsr:@std/streams@*": "1.0.8",
+    "jsr:@std/streams@^1.0.8": "1.0.8"
+  },
+  "jsr": {
+    "@es-toolkit/es-toolkit@1.29.0": {
+      "integrity": "1f0e6d67236bab663d3c8089d815d735e2313069d9cba1741d9908081364d11f"
+    },
+    "@qnighy/dedent@0.1.2": {
+      "integrity": "9e420cff5b0082dba168385c9dfc56f25ef9a07999605e5fc9bc2058529998ee"
+    },
+    "@seacrest/option-result-rs@0.1.1": {
+      "integrity": "d24bd20977f1c5dd0e1a27f5b872751c31bd072c0733f9e48dc6ede647adf0cd"
+    },
+    "@std/assert@1.0.9": {
+      "integrity": "a9f0c611a869cc791b26f523eec54c7e187aab7932c2c8e8bea0622d13680dcd",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/bytes@1.0.4": {
+      "integrity": "11a0debe522707c95c7b7ef89b478c13fb1583a7cfb9a85674cd2cc2e3a28abc"
+    },
+    "@std/cli@1.0.8": {
+      "integrity": "3762d8dc9a373715c08d871c38d45e637b25266f013a1d0bbe560bca409de94e"
+    },
+    "@std/internal@1.0.5": {
+      "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
+    },
+    "@std/streams@1.0.8": {
+      "integrity": "b41332d93d2cf6a82fe4ac2153b930adf1a859392931e2a19d9fabfb6f154fb3",
+      "dependencies": [
+        "jsr:@std/bytes"
+      ]
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@es-toolkit/es-toolkit@^1.29.0",
+      "jsr:@qnighy/dedent@~0.1.2",
+      "jsr:@seacrest/option-result-rs@~0.1.1",
+      "jsr:@std/assert@^1.0.9",
+      "jsr:@std/cli@^1.0.8",
+      "jsr:@std/streams@^1.0.8"
+    ]
+  }
+}
