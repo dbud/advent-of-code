@@ -1,4 +1,4 @@
-import { sum, zip } from "jsr:@es-toolkit/es-toolkit";
+import { sum, zip } from "@es-toolkit/es-toolkit";
 
 const parse = async (input: ReadableStream<string>) => {
   const a = [], b = [];

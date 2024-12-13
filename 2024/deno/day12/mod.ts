@@ -1,4 +1,4 @@
-import { range, sum } from "jsr:@es-toolkit/es-toolkit";
+import { range, sum } from "@es-toolkit/es-toolkit";
 
 async function parse(
   input: ReadableStream<string>,

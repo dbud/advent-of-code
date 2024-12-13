@@ -1,12 +1,6 @@
-import { toText } from "jsr:@std/streams/to-text";
-import {
-  flatMap,
-  partition,
-  range,
-  sortBy,
-  sum,
-} from "jsr:@es-toolkit/es-toolkit";
-import { Option } from "jsr:@seacrest/option-result-rs";
+import { toText } from "@std/streams/to-text";
+import { flatMap, partition, range, sortBy, sum } from "@es-toolkit/es-toolkit";
+import { Option } from "@seacrest/option-result-rs";
 
 type Span = {
   pos: number;

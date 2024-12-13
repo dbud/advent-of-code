@@ -1,4 +1,4 @@
-import { drop, sum, zip } from "jsr:@es-toolkit/es-toolkit";
+import { drop, sum, zip } from "@es-toolkit/es-toolkit";
 
 async function parse(
   input: ReadableStream<string>,

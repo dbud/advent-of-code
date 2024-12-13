@@ -1,5 +1,5 @@
-import { toText } from "jsr:@std/streams";
-import { sum } from "jsr:@es-toolkit/es-toolkit";
+import { toText } from "@std/streams";
+import { sum } from "@es-toolkit/es-toolkit";
 
 type State = { i: number; input: string };
 

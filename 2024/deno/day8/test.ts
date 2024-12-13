@@ -1,6 +1,6 @@
-import { assertEquals } from "jsr:@std/assert";
-import { TextLineStream } from "jsr:@std/streams/text-line-stream";
-import { dedent } from "jsr:@qnighy/dedent";
+import { assertEquals } from "@std/assert";
+import { TextLineStream } from "@std/streams/text-line-stream";
+import { dedent } from "@qnighy/dedent";
 
 import { part1, part2 } from "./mod.ts";
 

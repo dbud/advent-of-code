@@ -1,5 +1,5 @@
-import { toText } from "jsr:@std/streams/to-text";
-import { sum } from "jsr:@es-toolkit/es-toolkit";
+import { toText } from "@std/streams/to-text";
+import { sum } from "@es-toolkit/es-toolkit";
 
 async function parse(input: ReadableStream<string>) {
   return (await toText(input)).split(/\s+/).map(Number);

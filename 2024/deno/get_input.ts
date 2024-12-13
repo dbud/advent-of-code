@@ -1,5 +1,5 @@
-import "jsr:@std/dotenv/load";
-import { pipe } from "jsr:@core/pipe/async/pipe";
+import "@std/dotenv/load";
+import { pipe } from "@core/pipe/async/pipe";
 
 pipe(
   Deno.args[0],

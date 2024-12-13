@@ -1,5 +1,5 @@
-import { chunk, take } from "jsr:@es-toolkit/es-toolkit";
-import { None, Option, Some } from "jsr:@seacrest/option-result-rs";
+import { chunk, take } from "@es-toolkit/es-toolkit";
+import { None, Option, Some } from "@seacrest/option-result-rs";
 
 async function parse(input: ReadableStream<string>) {
   return chunk(await Array.fromAsync(input), 4)
