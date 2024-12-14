@@ -1,12 +1,17 @@
 import { join } from "@std/path";
-import { groupBy } from "@es-toolkit/es-toolkit";
+import { groupBy, sum } from "@es-toolkit/es-toolkit";
 import { createCanvas } from "@gfx/canvas";
 
-async function parse(input: ReadableStream<string>) {
+type Vec2 = [number, number];
+type Robot = [Vec2, Vec2];
+
+async function parse(
+  input: ReadableStream<string>,
+): Promise<Robot[]> {
   return (await Array.fromAsync(input))
     .map((line) => {
-      const [_1, px, py, _2, vx, vy] = line.split(/\s|=|,/);
-      return [px, py, vx, vy].map(Number);
+      const [_1, px, py, _2, vx, vy] = line.split(/\s|=|,/).map(Number);
+      return [[px, py], [vx, vy]];
     });
 }
 
@@ -15,76 +20,73 @@ const wrap = (x: number, a: number) => {
   return r >= 0 ? r : r + a;
 };
 
-export async function part1(input: ReadableStream<string>, isTest = false) {
-  const [cols, rows] = isTest ? [11, 7] : [101, 103];
-  const t = 100;
-
-  const positions = (await parse(input)).map((
-    [px, py, vx, vy],
-  ) => [
+const after = (
+  init: Robot[],
+  [cols, rows]: Vec2,
+  t: number,
+): Vec2[] =>
+  init.map(([[px, py], [vx, vy]]) => [
     wrap(px + vx * t, cols),
     wrap(py + vy * t, rows),
   ]);
-  const quadrants = groupBy(
-    positions,
-    ([x, y]) =>
-      `${Math.sign(x - Math.floor(cols / 2))}:${
-        Math.sign(y - Math.floor(rows / 2))
-      }`,
-  );
 
-  return quadrants["1:1"].length *
-    quadrants["1:-1"].length *
-    quadrants["-1:-1"].length *
-    quadrants["-1:1"].length;
+type Quad = "1:1" | "-1:1" | "-1:-1" | "1:-1";
+
+const groupQuadrants = (positions: Vec2[], [cols, rows]: Vec2): Vec2[][] => {
+  const [mx, my] = [Math.floor(cols / 2), Math.floor(rows / 2)];
+  const groups = groupBy(
+    positions,
+    ([x, y]: Vec2) => `${Math.sign(x - mx)}:${Math.sign(y - my)}` as Quad,
+  );
+  return [groups["1:1"], groups["-1:1"], groups["-1:-1"], groups["1:-1"]];
+};
+
+const DIMENSIONS: Vec2 = [101, 103];
+
+export async function part1(input: ReadableStream<string>, isTest = false) {
+  const dimensions: Vec2 = isTest ? [11, 7] : DIMENSIONS;
+  const init = await parse(input);
+  const positions = after(init, dimensions, 100);
+  const quadrants = groupQuadrants(positions, dimensions);
+  return quadrants.reduce((p, quad) => p * quad.length, 1);
+}
+
+const SCALE = 4;
+const OUTPUT_FOLDER = "timelapse";
+
+export async function draw(t: number, positions: Vec2[]) {
+  try {
+    await Deno.mkdir(OUTPUT_FOLDER);
+  } catch (_e) { /* okay if exists */ }
+
+  const [cols, rows] = DIMENSIONS;
+  const canvas = createCanvas(cols * SCALE, rows * SCALE);
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "black";
+  for (const [x, y] of positions) {
+    ctx.fillRect(SCALE * x, SCALE * y, SCALE, SCALE);
+  }
+  canvas.save(join(
+    OUTPUT_FOLDER,
+    t.toString().padStart(5, "0") + ".png",
+  ));
 }
 
 export async function part2(input: ReadableStream<string>) {
-  const maxSeconds = 10000;
-  const cellSize = 20, threshold = 0.2;
-  const [cols, rows] = [101, 103];
-  const scale = 4;
-  const output = "timelapse";
+  const MAX_SECONDS = DIMENSIONS[0] * DIMENSIONS[1];
+
   const init = await parse(input);
 
-  try {
-    await Deno.mkdir(output);
-  } catch (_e) { /* okay if exists */ }
+  for (let t = 1; t <= MAX_SECONDS; t++) {
+    const positions = after(init, DIMENSIONS, t);
+    const quadrants = groupQuadrants(positions, DIMENSIONS);
+    const counts = quadrants
+      .map((quad) => quad.length)
+      .toSorted((a, b) => b - a); // descending
 
-  for (let t = 1; t <= maxSeconds; t++) {
-    const positions = init.map(([px, py, vx, vy]) => [
-      wrap(px + vx * t, cols),
-      wrap(py + vy * t, rows),
-    ]);
-
-    // collect points to cells of cellSize
-    const cells = [];
-    const n = Math.ceil(rows / cellSize);
-    for (const [x, y] of positions) {
-      const cx = Math.floor(x / cellSize);
-      const cy = Math.floor(y / cellSize);
-      const idx = cx + cy * n;
-      if (cells[idx] == null) cells[idx] = 1;
-      else cells[idx]++;
+    if (counts[0] >= sum(counts.slice(1))) {
+      await draw(t, positions);
+      return t;
     }
-    // filter moderately filled clusters
-    const filled = cells.filter((x) =>
-      x && x / cellSize / cellSize > threshold
-    );
-    if (filled.length === 0) continue;
-
-    console.log(t);
-
-    // draw position and save image
-    const canvas = createCanvas(cols * scale, rows * scale);
-    const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "black";
-    for (const [x, y] of positions) {
-      ctx.fillRect(scale * x, scale * y, scale, scale);
-    }
-    canvas.save(join(
-      output,
-      t.toString().padStart(5, "0") + ".png",
-    ));
   }
 }
