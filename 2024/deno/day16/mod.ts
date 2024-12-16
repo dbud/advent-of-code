@@ -1,3 +1,4 @@
+import { gray } from "jsr:@std/internal@^1.0.5/styles";
 import { PriorityQueue } from "jsr:@mskr/data-structures";
 
 class Graph {
@@ -31,7 +32,6 @@ function dijkstra(graph: Graph, start: string, end: string) {
     comparator: (a, b) => a.distance - b.distance,
   });
 
-  graph.getAdj(start).forEach(([node, _]) => distances[node] = Infinity);
   distances[start] = 0;
   paths[start] = [[start]];
   pq.enqueue({ node: start, distance: 0 });
@@ -57,6 +57,19 @@ function dijkstra(graph: Graph, start: string, end: string) {
     cost: distances[end],
     paths: paths[end] ?? [],
   };
+}
+
+function dijkstraMany(graph: Graph, start: string, ends: string[]) {
+  return ends
+    .flatMap((end) => dijkstra(graph, start, end))
+    .reduce(
+      (min, { cost, paths }) => {
+        if (cost === min.cost) return { cost, paths: min.paths.concat(paths) };
+        else if (cost < min.cost) return { cost, paths };
+        else return min;
+      },
+      { cost: Infinity, paths: [] },
+    );
 }
 
 const DIRECTIONS = ["N", "E", "S", "W"] as const;
@@ -137,25 +150,16 @@ async function parse(input: ReadableStream<string>) {
 
 export async function part1(input: ReadableStream<string>) {
   const { graph, start, ends } = await parse(input);
-
-  return Math.min(
-    ...ends.map((end) => dijkstra(graph, toNode(start), toNode(end)).cost),
-  );
+  return dijkstraMany(graph, toNode(start), ends.map(toNode)).cost;
 }
 
 export async function part2(input: ReadableStream<string>) {
   const { graph, start, ends } = await parse(input);
 
-  const shortests = ends
-    .flatMap((end) => dijkstra(graph, toNode(start), toNode(end)))
-    .reduce((min, { cost, paths }) => {
-      if (cost === min.cost) return { cost, paths: min.paths.concat(paths) };
-      else if (cost < min.cost) return { cost, paths };
-      else return min;
-    }, { cost: Infinity, paths: [] });
+  const { paths } = dijkstraMany(graph, toNode(start), ends.map(toNode));
 
   const visited = new Set<string>();
-  for (const path of shortests.paths) {
+  for (const path of paths) {
     for (const node of path) {
       const [x, y, _] = node.split(":");
       visited.add(`${x}:${y}`);
