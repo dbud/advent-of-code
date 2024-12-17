@@ -1,5 +1,4 @@
-import { gray } from "jsr:@std/internal@^1.0.5/styles";
-import { PriorityQueue } from "jsr:@mskr/data-structures";
+import { PriorityQueue } from "@mskr/data-structures";
 
 class Graph {
   #adj: Map<string, [string, number][]> = new Map();
@@ -22,7 +21,7 @@ class Graph {
 
 function dijkstra(graph: Graph, start: string, end: string) {
   const distances: Record<string, number> = {};
-  const paths: Record<string, string[][]> = {};
+  const pred: Record<string, string[]> = {};
 
   interface State {
     node: string;
@@ -33,7 +32,7 @@ function dijkstra(graph: Graph, start: string, end: string) {
   });
 
   distances[start] = 0;
-  paths[start] = [[start]];
+  pred[start] = [];
   pq.enqueue({ node: start, distance: 0 });
 
   while (!pq.isEmpty()) {
@@ -43,19 +42,26 @@ function dijkstra(graph: Graph, start: string, end: string) {
       const newDistance = distances[current] + weight;
       // another path with the same distance
       if (newDistance === distances[node]) {
-        paths[node].push(...paths[current].map((path) => [...path, node]));
+        pred[node].push(current);
       } // new shortest distance
       else if (newDistance < (distances[node] ?? Infinity)) {
         distances[node] = newDistance;
-        paths[node] = paths[current].map((path) => [...path, node]);
+        pred[node] = [current];
         pq.enqueue({ node, distance: newDistance });
       }
     }
   }
 
+  const trace = (node: string): string[][] =>
+    pred[node]
+      ? (pred[node].length === 0
+        ? [[node]]
+        : pred[node].flatMap(trace).map((path) => [node, ...path]))
+      : [];
+
   return {
     cost: distances[end],
-    paths: paths[end] ?? [],
+    paths: trace(end).toReversed(),
   };
 }
 
