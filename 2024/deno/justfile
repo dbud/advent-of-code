@@ -10,3 +10,16 @@ test day:
 
 solve day part:
     deno task --cwd {{day}} {{part}}
+
+bench day:
+    deno task --cwd {{day}} bench | sed 's/\x1b\[[0-9;]*m//g' | tee benchmarks/{{day}}.txt
+
+bench_all:
+    for day in `ls -d day* | sort -V`; do \
+        just bench $day; \
+    done
+
+bench_report:
+    for file in `ls -d benchmarks/day*.txt | sort -V`; do \
+      sed '/benchmark/,$!d' $file; \
+    done > benchmarks.txt

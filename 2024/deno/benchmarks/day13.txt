@@ -1,0 +1,10 @@
+    CPU | Apple M3
+Runtime | Deno 2.1.4 (aarch64-apple-darwin)
+
+file:///Users/dbud/Documents/dev/projects/advent-of-code/2024/deno/day13/bench.ts
+
+benchmark     time/iter (avg)        iter/s      (min … max)           p75      p99     p995
+------------- ----------------------------- --------------------- --------------------------
+day13 part1          522.9 µs         1,912 (488.5 µs … 872.1 µs) 535.6 µs 677.4 µs 713.0 µs
+day13 part2          529.8 µs         1,887 (505.5 µs … 694.6 µs) 526.9 µs 635.2 µs 643.0 µs
+

@@ -1,7 +1,8 @@
 {
   "tasks": {
     "part1": "time deno run part1.ts <input.txt",
-    "part2": "time deno run --allow-env --allow-read --allow-write --allow-ffi part2.ts <input.txt"
+    "part2": "time deno run --allow-env --allow-read --allow-write --allow-ffi part2.ts <input.txt",
+    "bench": "deno bench --allow-read --allow-env --allow-write --allow-ffi bench.ts"
   },
   "imports": {
     "@es-toolkit/es-toolkit": "jsr:@es-toolkit/es-toolkit@^1.29.0",
