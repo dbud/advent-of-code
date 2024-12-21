@@ -1,4 +1,4 @@
-import { drop, sum, zip } from "@es-toolkit/es-toolkit";
+import { sum } from "@es-toolkit/es-toolkit";
 
 async function parse(
   input: ReadableStream<string>,
@@ -8,32 +8,44 @@ async function parse(
     .map(([target, ...values]) => [target, values]);
 }
 
-const combinations = <T>(elements: T[]) =>
-  function* recur(n: number): Generator<T[]> {
-    if (n === 0) yield [];
-    else {
-      for (const e of elements) {
-        for (const tail of recur(n - 1)) {
-          yield [e].concat(tail);
-        }
+function* combinations<T>(elements: T[], n: number): Generator<T[]> {
+  const k = elements.length;
+  const idx = new Array(n).fill(0);
+  while (n > 0) {
+    yield idx.map((i) => elements[i]);
+    idx[0]++;
+    for (let i = 0; i < n - 1; i++) {
+      if (idx[i] === k) {
+        idx[i] = 0;
+        idx[i + 1]++;
       }
     }
-  };
+    if (idx.at(-1) === k) return;
+  }
+}
+
+function concat(lhs: number, rhs: number) {
+  let p = 1;
+  while (p <= rhs) p *= 10;
+  return lhs * p + rhs;
+}
 
 function evaluate(values: number[], ops: string[]): number {
-  return zip(ops, drop(values, 1))
-    .reduce((lhs, [op, rhs]) => {
-      switch (op) {
-        case "+":
-          return lhs + rhs;
-        case "*":
-          return lhs * rhs;
-        case "||":
-          return Number(`${lhs}${rhs}`);
-        default:
-          return lhs;
-      }
-    }, values[0]);
+  let acc = values[0];
+  for (let i = 0; i < ops.length; i++) {
+    switch (ops[i]) {
+      case "+":
+        acc += values[i + 1];
+        break;
+      case "*":
+        acc *= values[i + 1];
+        break;
+      case "||":
+        acc = concat(acc, values[i + 1]);
+        break;
+    }
+  }
+  return acc;
 }
 
 const solveWith = (ops: string[]) =>
@@ -41,7 +53,7 @@ const solveWith = (ops: string[]) =>
     return sum(
       equations
         .filter(([target, values]) =>
-          combinations(ops)(values.length - 1)
+          combinations(ops, values.length - 1)
             .some((ops) => evaluate(values, ops) === target)
         )
         .map(([target, _values]) => target),

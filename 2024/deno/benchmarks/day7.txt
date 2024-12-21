@@ -5,6 +5,6 @@ file:///Users/dbud/Documents/dev/projects/advent-of-code/2024/deno/day7/bench.ts
 
 benchmark     time/iter (avg)        iter/s      (min … max)           p75      p99     p995
 ------------- ----------------------------- --------------------- --------------------------
- day7 part1          239.6 ms           4.2 (236.8 ms … 244.4 ms) 241.6 ms 244.4 ms 244.4 ms
- day7 part2            12.0 s           0.1 (  12.0 s …   12.2 s)   12.0 s   12.2 s   12.2 s
+ day7 part1           21.5 ms          46.5 ( 20.7 ms …  22.3 ms)  22.1 ms  22.3 ms  22.3 ms
+ day7 part2             1.1 s           0.9 (   1.1 s …    1.2 s)    1.1 s    1.2 s    1.2 s
 
