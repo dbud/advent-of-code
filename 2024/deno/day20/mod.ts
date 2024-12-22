@@ -3,30 +3,19 @@ import { PriorityQueue } from "@mskr/data-structures";
 class Graph {
   #adj: Map<string, [string, number][]> = new Map();
 
-  addNode(node: string): Graph {
+  addNode(node: string) {
     if (!this.#adj.has(node)) {
       this.#adj.set(node, []);
     }
-    return this;
   }
 
-  addEdge(from: string, to: string, weight: number = 1): Graph {
+  addEdge(from: string, to: string, weight: number = 1) {
     this.addNode(from);
     this.#adj.get(from)!.push([to, weight]);
-    return this;
   }
 
   getAdj(node: string): [string, number][] {
     return this.#adj.get(node) ?? [];
-  }
-
-  get clone(): Graph {
-    const clone = new Graph();
-    clone.#adj = new Map();
-    for (const [k, v] of this.#adj) {
-      clone.#adj.set(k, [...v]);
-    }
-    return clone;
   }
 }
 
