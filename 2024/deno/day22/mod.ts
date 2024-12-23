@@ -54,31 +54,37 @@ const tuples = (n: number) =>
 export async function part2(input: ReadableStream<string>) {
   const buyers = await parse(input);
 
-  const keys = new Set<string>();
-  const maps: Map<string, number>[] = [];
+  const keyFor = ([a, b, c, d]: number[]) =>
+    (a + 9) * 20 ** 3 + (b + 9) * 20 ** 2 + (c + 9) * 20 + (d + 9);
+
+  const keys = new Set<number>();
+  const sums: number[] = [];
 
   for (const init of buyers) {
     const prices = secrets(init).take(STEPS).toArray();
 
-    const m = new Map<string, number>();
+    const visited = new Set<number>();
     for (
       const [price, change] of zip(
         drop(prices, 4),
         tuples(4)(diffs(prices).toArray()).toArray(),
       )
     ) {
-      const key = change.toString();
-      if (!m.has(key)) m.set(key, price);
-      keys.add(key);
+      const key = keyFor(change);
+      if (!keys.has(key)) {
+        keys.add(key);
+        sums[key] = 0;
+      }
+      if (!visited.has(key)) {
+        visited.add(key);
+        sums[key] += price;
+      }
     }
-    maps.push(m);
   }
 
   let max = -Infinity;
-  for (const key of keys) {
-    let sum = 0;
-    for (const map of maps) sum += map.get(key) ?? 0;
-    if (sum >= max) max = sum;
+  for (const sum of sums) {
+    if (sum > max) max = sum;
   }
   return max;
 }
