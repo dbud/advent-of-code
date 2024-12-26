@@ -1,7 +1,7 @@
 {
   "tasks": {
     "part1": "time deno run part1.ts <input.txt",
-    "part2": "time deno run part2.ts <input.txt",
+    "part2": "deno run --allow-write part2.ts <input.txt && cat graph.dot | dot -Tpdf >graph.pdf && open graph.pdf",
     "bench": "deno bench --allow-read bench.ts"
   },
   "imports": {

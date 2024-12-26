@@ -2,7 +2,7 @@ import { assertEquals } from "@std/assert";
 import { TextLineStream } from "@std/streams/text-line-stream";
 import { dedent } from "@qnighy/dedent";
 
-import { part1, part2 } from "./mod.ts";
+import { part1 } from "./mod.ts";
 
 Deno.test(async function examplePart1() {
   assertEquals(

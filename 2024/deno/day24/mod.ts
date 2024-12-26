@@ -1,3 +1,5 @@
+import { range } from "@es-toolkit/es-toolkit";
+
 type GateType = "AND" | "OR" | "XOR";
 type Gate = { x: string; y: string; type: GateType; z: string };
 
@@ -89,4 +91,51 @@ export async function part1(input: ReadableStream<string>) {
   return asBigInt(getValue(values, "z"));
 }
 
-export async function part2(_input: ReadableStream<string>) {}
+function swap(z1: string, z2: string) {
+  return (gates: Gate[]) =>
+    gates.map((gate) => {
+      if (gate.z === z1) return { ...gate, z: z2 };
+      else if (gate.z === z2) return { ...gate, z: z1 };
+      else return gate;
+    });
+}
+
+export async function part2(input: ReadableStream<string>) {
+  const { gates } = await parse(input);
+
+  const fixes = [
+    ["gmq", "z21"],
+    ["z05", "frn"],
+    ["z39", "wtt"],
+    ["vtj", "wnf"],
+  ];
+  const fixed = fixes.reduce(
+    (gates, [z1, z2]) => swap(z1, z2)(gates),
+    gates,
+  );
+
+  const colors = { AND: "red", OR: "green", XOR: "blue" };
+  const clusters = range(45).map((i) => {
+    const j = i.toString().padStart(2, "0");
+    return `
+      subgraph cluster_${j} {
+        {rank=same; x${j} y${j} z${j}}
+        x${j} -> y${j} [style=invis]; y${j} -> z${j} [style=invis]
+        x${j}; y${j}; z${j}
+      }
+    `;
+  });
+  const edges = fixed.map(({ x, y, z, type }) => `
+    ${x} -> ${z} [label=${type} color=${colors[type]}]
+    ${y} -> ${z} [label=${type} color=${colors[type]}]
+  `);
+  const graph = `
+    digraph {
+      ${clusters.join("\n")}
+      ${edges.join("\n")}
+    }
+  `;
+  await Deno.writeTextFile("graph.dot", graph);
+
+  return fixes.flat().toSorted().join(",");
+}

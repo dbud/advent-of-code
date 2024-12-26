@@ -1,0 +1,1207 @@
+
+    digraph {
+      
+      subgraph cluster_00 {
+        {rank=same; x00 y00 z00}
+        x00 -> y00 [style=invis]; y00 -> z00 [style=invis]
+        x00; y00; z00
+      }
+    
+
+      subgraph cluster_01 {
+        {rank=same; x01 y01 z01}
+        x01 -> y01 [style=invis]; y01 -> z01 [style=invis]
+        x01; y01; z01
+      }
+    
+
+      subgraph cluster_02 {
+        {rank=same; x02 y02 z02}
+        x02 -> y02 [style=invis]; y02 -> z02 [style=invis]
+        x02; y02; z02
+      }
+    
+
+      subgraph cluster_03 {
+        {rank=same; x03 y03 z03}
+        x03 -> y03 [style=invis]; y03 -> z03 [style=invis]
+        x03; y03; z03
+      }
+    
+
+      subgraph cluster_04 {
+        {rank=same; x04 y04 z04}
+        x04 -> y04 [style=invis]; y04 -> z04 [style=invis]
+        x04; y04; z04
+      }
+    
+
+      subgraph cluster_05 {
+        {rank=same; x05 y05 z05}
+        x05 -> y05 [style=invis]; y05 -> z05 [style=invis]
+        x05; y05; z05
+      }
+    
+
+      subgraph cluster_06 {
+        {rank=same; x06 y06 z06}
+        x06 -> y06 [style=invis]; y06 -> z06 [style=invis]
+        x06; y06; z06
+      }
+    
+
+      subgraph cluster_07 {
+        {rank=same; x07 y07 z07}
+        x07 -> y07 [style=invis]; y07 -> z07 [style=invis]
+        x07; y07; z07
+      }
+    
+
+      subgraph cluster_08 {
+        {rank=same; x08 y08 z08}
+        x08 -> y08 [style=invis]; y08 -> z08 [style=invis]
+        x08; y08; z08
+      }
+    
+
+      subgraph cluster_09 {
+        {rank=same; x09 y09 z09}
+        x09 -> y09 [style=invis]; y09 -> z09 [style=invis]
+        x09; y09; z09
+      }
+    
+
+      subgraph cluster_10 {
+        {rank=same; x10 y10 z10}
+        x10 -> y10 [style=invis]; y10 -> z10 [style=invis]
+        x10; y10; z10
+      }
+    
+
+      subgraph cluster_11 {
+        {rank=same; x11 y11 z11}
+        x11 -> y11 [style=invis]; y11 -> z11 [style=invis]
+        x11; y11; z11
+      }
+    
+
+      subgraph cluster_12 {
+        {rank=same; x12 y12 z12}
+        x12 -> y12 [style=invis]; y12 -> z12 [style=invis]
+        x12; y12; z12
+      }
+    
+
+      subgraph cluster_13 {
+        {rank=same; x13 y13 z13}
+        x13 -> y13 [style=invis]; y13 -> z13 [style=invis]
+        x13; y13; z13
+      }
+    
+
+      subgraph cluster_14 {
+        {rank=same; x14 y14 z14}
+        x14 -> y14 [style=invis]; y14 -> z14 [style=invis]
+        x14; y14; z14
+      }
+    
+
+      subgraph cluster_15 {
+        {rank=same; x15 y15 z15}
+        x15 -> y15 [style=invis]; y15 -> z15 [style=invis]
+        x15; y15; z15
+      }
+    
+
+      subgraph cluster_16 {
+        {rank=same; x16 y16 z16}
+        x16 -> y16 [style=invis]; y16 -> z16 [style=invis]
+        x16; y16; z16
+      }
+    
+
+      subgraph cluster_17 {
+        {rank=same; x17 y17 z17}
+        x17 -> y17 [style=invis]; y17 -> z17 [style=invis]
+        x17; y17; z17
+      }
+    
+
+      subgraph cluster_18 {
+        {rank=same; x18 y18 z18}
+        x18 -> y18 [style=invis]; y18 -> z18 [style=invis]
+        x18; y18; z18
+      }
+    
+
+      subgraph cluster_19 {
+        {rank=same; x19 y19 z19}
+        x19 -> y19 [style=invis]; y19 -> z19 [style=invis]
+        x19; y19; z19
+      }
+    
+
+      subgraph cluster_20 {
+        {rank=same; x20 y20 z20}
+        x20 -> y20 [style=invis]; y20 -> z20 [style=invis]
+        x20; y20; z20
+      }
+    
+
+      subgraph cluster_21 {
+        {rank=same; x21 y21 z21}
+        x21 -> y21 [style=invis]; y21 -> z21 [style=invis]
+        x21; y21; z21
+      }
+    
+
+      subgraph cluster_22 {
+        {rank=same; x22 y22 z22}
+        x22 -> y22 [style=invis]; y22 -> z22 [style=invis]
+        x22; y22; z22
+      }
+    
+
+      subgraph cluster_23 {
+        {rank=same; x23 y23 z23}
+        x23 -> y23 [style=invis]; y23 -> z23 [style=invis]
+        x23; y23; z23
+      }
+    
+
+      subgraph cluster_24 {
+        {rank=same; x24 y24 z24}
+        x24 -> y24 [style=invis]; y24 -> z24 [style=invis]
+        x24; y24; z24
+      }
+    
+
+      subgraph cluster_25 {
+        {rank=same; x25 y25 z25}
+        x25 -> y25 [style=invis]; y25 -> z25 [style=invis]
+        x25; y25; z25
+      }
+    
+
+      subgraph cluster_26 {
+        {rank=same; x26 y26 z26}
+        x26 -> y26 [style=invis]; y26 -> z26 [style=invis]
+        x26; y26; z26
+      }
+    
+
+      subgraph cluster_27 {
+        {rank=same; x27 y27 z27}
+        x27 -> y27 [style=invis]; y27 -> z27 [style=invis]
+        x27; y27; z27
+      }
+    
+
+      subgraph cluster_28 {
+        {rank=same; x28 y28 z28}
+        x28 -> y28 [style=invis]; y28 -> z28 [style=invis]
+        x28; y28; z28
+      }
+    
+
+      subgraph cluster_29 {
+        {rank=same; x29 y29 z29}
+        x29 -> y29 [style=invis]; y29 -> z29 [style=invis]
+        x29; y29; z29
+      }
+    
+
+      subgraph cluster_30 {
+        {rank=same; x30 y30 z30}
+        x30 -> y30 [style=invis]; y30 -> z30 [style=invis]
+        x30; y30; z30
+      }
+    
+
+      subgraph cluster_31 {
+        {rank=same; x31 y31 z31}
+        x31 -> y31 [style=invis]; y31 -> z31 [style=invis]
+        x31; y31; z31
+      }
+    
+
+      subgraph cluster_32 {
+        {rank=same; x32 y32 z32}
+        x32 -> y32 [style=invis]; y32 -> z32 [style=invis]
+        x32; y32; z32
+      }
+    
+
+      subgraph cluster_33 {
+        {rank=same; x33 y33 z33}
+        x33 -> y33 [style=invis]; y33 -> z33 [style=invis]
+        x33; y33; z33
+      }
+    
+
+      subgraph cluster_34 {
+        {rank=same; x34 y34 z34}
+        x34 -> y34 [style=invis]; y34 -> z34 [style=invis]
+        x34; y34; z34
+      }
+    
+
+      subgraph cluster_35 {
+        {rank=same; x35 y35 z35}
+        x35 -> y35 [style=invis]; y35 -> z35 [style=invis]
+        x35; y35; z35
+      }
+    
+
+      subgraph cluster_36 {
+        {rank=same; x36 y36 z36}
+        x36 -> y36 [style=invis]; y36 -> z36 [style=invis]
+        x36; y36; z36
+      }
+    
+
+      subgraph cluster_37 {
+        {rank=same; x37 y37 z37}
+        x37 -> y37 [style=invis]; y37 -> z37 [style=invis]
+        x37; y37; z37
+      }
+    
+
+      subgraph cluster_38 {
+        {rank=same; x38 y38 z38}
+        x38 -> y38 [style=invis]; y38 -> z38 [style=invis]
+        x38; y38; z38
+      }
+    
+
+      subgraph cluster_39 {
+        {rank=same; x39 y39 z39}
+        x39 -> y39 [style=invis]; y39 -> z39 [style=invis]
+        x39; y39; z39
+      }
+    
+
+      subgraph cluster_40 {
+        {rank=same; x40 y40 z40}
+        x40 -> y40 [style=invis]; y40 -> z40 [style=invis]
+        x40; y40; z40
+      }
+    
+
+      subgraph cluster_41 {
+        {rank=same; x41 y41 z41}
+        x41 -> y41 [style=invis]; y41 -> z41 [style=invis]
+        x41; y41; z41
+      }
+    
+
+      subgraph cluster_42 {
+        {rank=same; x42 y42 z42}
+        x42 -> y42 [style=invis]; y42 -> z42 [style=invis]
+        x42; y42; z42
+      }
+    
+
+      subgraph cluster_43 {
+        {rank=same; x43 y43 z43}
+        x43 -> y43 [style=invis]; y43 -> z43 [style=invis]
+        x43; y43; z43
+      }
+    
+
+      subgraph cluster_44 {
+        {rank=same; x44 y44 z44}
+        x44 -> y44 [style=invis]; y44 -> z44 [style=invis]
+        x44; y44; z44
+      }
+    
+      
+    y08 -> pkh [label=AND color=red]
+    x08 -> pkh [label=AND color=red]
+  
+
+    grg -> bbk [label=AND color=red]
+    twt -> bbk [label=AND color=red]
+  
+
+    vvt -> vgs [label=OR color=green]
+    wwt -> vgs [label=OR color=green]
+  
+
+    x10 -> pmq [label=XOR color=blue]
+    y10 -> pmq [label=XOR color=blue]
+  
+
+    pmq -> z10 [label=XOR color=blue]
+    hkf -> z10 [label=XOR color=blue]
+  
+
+    vmw -> hkf [label=OR color=green]
+    bfb -> hkf [label=OR color=green]
+  
+
+    twp -> kmj [label=OR color=green]
+    qbq -> kmj [label=OR color=green]
+  
+
+    qns -> qhk [label=AND color=red]
+    mwj -> qhk [label=AND color=red]
+  
+
+    dqm -> z02 [label=XOR color=blue]
+    cqp -> z02 [label=XOR color=blue]
+  
+
+    snr -> htp [label=AND color=red]
+    crb -> htp [label=AND color=red]
+  
+
+    jwv -> z09 [label=XOR color=blue]
+    dgj -> z09 [label=XOR color=blue]
+  
+
+    sjf -> wkq [label=OR color=green]
+    rwf -> wkq [label=OR color=green]
+  
+
+    y02 -> dqm [label=XOR color=blue]
+    x02 -> dqm [label=XOR color=blue]
+  
+
+    msw -> rss [label=AND color=red]
+    qqp -> rss [label=AND color=red]
+  
+
+    fgv -> z26 [label=XOR color=blue]
+    bhw -> z26 [label=XOR color=blue]
+  
+
+    y03 -> ftb [label=AND color=red]
+    x03 -> ftb [label=AND color=red]
+  
+
+    kmj -> z24 [label=XOR color=blue]
+    fnh -> z24 [label=XOR color=blue]
+  
+
+    jhv -> z39 [label=XOR color=blue]
+    bkq -> z39 [label=XOR color=blue]
+  
+
+    x27 -> knf [label=XOR color=blue]
+    y27 -> knf [label=XOR color=blue]
+  
+
+    y40 -> jhf [label=XOR color=blue]
+    x40 -> jhf [label=XOR color=blue]
+  
+
+    gmq -> kkq [label=OR color=green]
+    nrs -> kkq [label=OR color=green]
+  
+
+    y03 -> ndn [label=XOR color=blue]
+    x03 -> ndn [label=XOR color=blue]
+  
+
+    x25 -> hfj [label=XOR color=blue]
+    y25 -> hfj [label=XOR color=blue]
+  
+
+    x33 -> rvf [label=AND color=red]
+    y33 -> rvf [label=AND color=red]
+  
+
+    wkh -> vrq [label=AND color=red]
+    pmn -> vrq [label=AND color=red]
+  
+
+    mgg -> fhw [label=OR color=green]
+    hbf -> fhw [label=OR color=green]
+  
+
+    nrr -> wqr [label=OR color=green]
+    rtk -> wqr [label=OR color=green]
+  
+
+    x00 -> mtk [label=AND color=red]
+    y00 -> mtk [label=AND color=red]
+  
+
+    crb -> z30 [label=XOR color=blue]
+    snr -> z30 [label=XOR color=blue]
+  
+
+    y37 -> qns [label=XOR color=blue]
+    x37 -> qns [label=XOR color=blue]
+  
+
+    kgw -> snr [label=OR color=green]
+    wms -> snr [label=OR color=green]
+  
+
+    y09 -> jwv [label=XOR color=blue]
+    x09 -> jwv [label=XOR color=blue]
+  
+
+    mtk -> jjp [label=AND color=red]
+    kvc -> jjp [label=AND color=red]
+  
+
+    x01 -> kvc [label=XOR color=blue]
+    y01 -> kvc [label=XOR color=blue]
+  
+
+    jgg -> fpm [label=AND color=red]
+    bsn -> fpm [label=AND color=red]
+  
+
+    kvt -> drd [label=OR color=green]
+    ftb -> drd [label=OR color=green]
+  
+
+    x15 -> tfs [label=AND color=red]
+    y15 -> tfs [label=AND color=red]
+  
+
+    x34 -> jgv [label=XOR color=blue]
+    y34 -> jgv [label=XOR color=blue]
+  
+
+    y44 -> vjg [label=XOR color=blue]
+    x44 -> vjg [label=XOR color=blue]
+  
+
+    x21 -> fqr [label=XOR color=blue]
+    y21 -> fqr [label=XOR color=blue]
+  
+
+    x36 -> rwh [label=XOR color=blue]
+    y36 -> rwh [label=XOR color=blue]
+  
+
+    y30 -> kgr [label=AND color=red]
+    x30 -> kgr [label=AND color=red]
+  
+
+    sqg -> rfq [label=OR color=green]
+    hfb -> rfq [label=OR color=green]
+  
+
+    x05 -> kbj [label=XOR color=blue]
+    y05 -> kbj [label=XOR color=blue]
+  
+
+    rjq -> jhv [label=OR color=green]
+    skn -> jhv [label=OR color=green]
+  
+
+    y17 -> bmp [label=AND color=red]
+    x17 -> bmp [label=AND color=red]
+  
+
+    x28 -> jwb [label=AND color=red]
+    y28 -> jwb [label=AND color=red]
+  
+
+    x44 -> vrj [label=AND color=red]
+    y44 -> vrj [label=AND color=red]
+  
+
+    wwn -> z23 [label=XOR color=blue]
+    gwm -> z23 [label=XOR color=blue]
+  
+
+    y39 -> gsr [label=AND color=red]
+    x39 -> gsr [label=AND color=red]
+  
+
+    wkq -> z15 [label=XOR color=blue]
+    tfv -> z15 [label=XOR color=blue]
+  
+
+    x31 -> sst [label=AND color=red]
+    y31 -> sst [label=AND color=red]
+  
+
+    x08 -> twt [label=XOR color=blue]
+    y08 -> twt [label=XOR color=blue]
+  
+
+    wnf -> pjp [label=AND color=red]
+    rsk -> pjp [label=AND color=red]
+  
+
+    mmr -> rwf [label=AND color=red]
+    qdc -> rwf [label=AND color=red]
+  
+
+    y22 -> jsr [label=XOR color=blue]
+    x22 -> jsr [label=XOR color=blue]
+  
+
+    pnj -> hhn [label=OR color=green]
+    bcc -> hhn [label=OR color=green]
+  
+
+    fpm -> kth [label=OR color=green]
+    wtv -> kth [label=OR color=green]
+  
+
+    kkq -> z22 [label=XOR color=blue]
+    jsr -> z22 [label=XOR color=blue]
+  
+
+    srn -> z33 [label=XOR color=blue]
+    kth -> z33 [label=XOR color=blue]
+  
+
+    vrq -> tkc [label=OR color=green]
+    mrt -> tkc [label=OR color=green]
+  
+
+    wwn -> qbq [label=AND color=red]
+    gwm -> qbq [label=AND color=red]
+  
+
+    jhf -> z40 [label=XOR color=blue]
+    mdn -> z40 [label=XOR color=blue]
+  
+
+    y13 -> tqf [label=XOR color=blue]
+    x13 -> tqf [label=XOR color=blue]
+  
+
+    kvc -> z01 [label=XOR color=blue]
+    mtk -> z01 [label=XOR color=blue]
+  
+
+    stg -> z35 [label=XOR color=blue]
+    kdv -> z35 [label=XOR color=blue]
+  
+
+    grg -> z08 [label=XOR color=blue]
+    twt -> z08 [label=XOR color=blue]
+  
+
+    kkq -> fjh [label=AND color=red]
+    jsr -> fjh [label=AND color=red]
+  
+
+    tmd -> rjm [label=AND color=red]
+    shm -> rjm [label=AND color=red]
+  
+
+    nvq -> gnp [label=AND color=red]
+    chk -> gnp [label=AND color=red]
+  
+
+    twb -> qqp [label=OR color=green]
+    ptq -> qqp [label=OR color=green]
+  
+
+    x32 -> bsn [label=XOR color=blue]
+    y32 -> bsn [label=XOR color=blue]
+  
+
+    y39 -> bkq [label=XOR color=blue]
+    x39 -> bkq [label=XOR color=blue]
+  
+
+    mph -> stg [label=OR color=green]
+    vbp -> stg [label=OR color=green]
+  
+
+    x02 -> rks [label=AND color=red]
+    y02 -> rks [label=AND color=red]
+  
+
+    dtj -> frh [label=AND color=red]
+    hfj -> frh [label=AND color=red]
+  
+
+    y43 -> qmr [label=XOR color=blue]
+    x43 -> qmr [label=XOR color=blue]
+  
+
+    chk -> z28 [label=XOR color=blue]
+    nvq -> z28 [label=XOR color=blue]
+  
+
+    x16 -> vtj [label=AND color=red]
+    y16 -> vtj [label=AND color=red]
+  
+
+    y06 -> ghf [label=XOR color=blue]
+    x06 -> ghf [label=XOR color=blue]
+  
+
+    rhr -> qjq [label=OR color=green]
+    ccq -> qjq [label=OR color=green]
+  
+
+    x38 -> rjq [label=AND color=red]
+    y38 -> rjq [label=AND color=red]
+  
+
+    tsf -> twb [label=AND color=red]
+    dtb -> twb [label=AND color=red]
+  
+
+    x15 -> tfv [label=XOR color=blue]
+    y15 -> tfv [label=XOR color=blue]
+  
+
+    vds -> skn [label=AND color=red]
+    gdk -> skn [label=AND color=red]
+  
+
+    hhn -> z36 [label=XOR color=blue]
+    rwh -> z36 [label=XOR color=blue]
+  
+
+    x40 -> bjf [label=AND color=red]
+    y40 -> bjf [label=AND color=red]
+  
+
+    wtd -> nvq [label=OR color=green]
+    cks -> nvq [label=OR color=green]
+  
+
+    jpk -> vds [label=OR color=green]
+    qhk -> vds [label=OR color=green]
+  
+
+    x14 -> qdc [label=XOR color=blue]
+    y14 -> qdc [label=XOR color=blue]
+  
+
+    y19 -> ptq [label=AND color=red]
+    x19 -> ptq [label=AND color=red]
+  
+
+    fnh -> gqj [label=AND color=red]
+    kmj -> gqj [label=AND color=red]
+  
+
+    pjp -> smg [label=OR color=green]
+    vtj -> smg [label=OR color=green]
+  
+
+    x11 -> tmd [label=XOR color=blue]
+    y11 -> tmd [label=XOR color=blue]
+  
+
+    bbk -> dgj [label=OR color=green]
+    pkh -> dgj [label=OR color=green]
+  
+
+    bkq -> wtt [label=AND color=red]
+    jhv -> wtt [label=AND color=red]
+  
+
+    y07 -> krp [label=AND color=red]
+    x07 -> krp [label=AND color=red]
+  
+
+    hkf -> crj [label=AND color=red]
+    pmq -> crj [label=AND color=red]
+  
+
+    y22 -> cdk [label=AND color=red]
+    x22 -> cdk [label=AND color=red]
+  
+
+    knb -> mmr [label=OR color=green]
+    vkk -> mmr [label=OR color=green]
+  
+
+    vds -> z38 [label=XOR color=blue]
+    gdk -> z38 [label=XOR color=blue]
+  
+
+    jhf -> qkq [label=AND color=red]
+    mdn -> qkq [label=AND color=red]
+  
+
+    vrj -> z45 [label=OR color=green]
+    gkc -> z45 [label=OR color=green]
+  
+
+    x41 -> mrt [label=AND color=red]
+    y41 -> mrt [label=AND color=red]
+  
+
+    jgv -> z34 [label=XOR color=blue]
+    dkh -> z34 [label=XOR color=blue]
+  
+
+    y16 -> wnf [label=XOR color=blue]
+    x16 -> wnf [label=XOR color=blue]
+  
+
+    rcf -> dtj [label=OR color=green]
+    gqj -> dtj [label=OR color=green]
+  
+
+    rvf -> dkh [label=OR color=green]
+    bqr -> dkh [label=OR color=green]
+  
+
+    x25 -> swn [label=AND color=red]
+    y25 -> swn [label=AND color=red]
+  
+
+    dbv -> z31 [label=XOR color=blue]
+    vhs -> z31 [label=XOR color=blue]
+  
+
+    y12 -> fgq [label=XOR color=blue]
+    x12 -> fgq [label=XOR color=blue]
+  
+
+    y20 -> kcf [label=AND color=red]
+    x20 -> kcf [label=AND color=red]
+  
+
+    rss -> mjj [label=OR color=green]
+    kcf -> mjj [label=OR color=green]
+  
+
+    hfj -> z25 [label=XOR color=blue]
+    dtj -> z25 [label=XOR color=blue]
+  
+
+    x14 -> sjf [label=AND color=red]
+    y14 -> sjf [label=AND color=red]
+  
+
+    fpd -> z17 [label=XOR color=blue]
+    smg -> z17 [label=XOR color=blue]
+  
+
+    x21 -> gmq [label=AND color=red]
+    y21 -> gmq [label=AND color=red]
+  
+
+    x43 -> prt [label=AND color=red]
+    y43 -> prt [label=AND color=red]
+  
+
+    x31 -> vhs [label=XOR color=blue]
+    y31 -> vhs [label=XOR color=blue]
+  
+
+    grv -> rsk [label=OR color=green]
+    tfs -> rsk [label=OR color=green]
+  
+
+    y33 -> srn [label=XOR color=blue]
+    x33 -> srn [label=XOR color=blue]
+  
+
+    msw -> z20 [label=XOR color=blue]
+    qqp -> z20 [label=XOR color=blue]
+  
+
+    gsr -> mdn [label=OR color=green]
+    wtt -> mdn [label=OR color=green]
+  
+
+    x30 -> crb [label=XOR color=blue]
+    y30 -> crb [label=XOR color=blue]
+  
+
+    y24 -> rcf [label=AND color=red]
+    x24 -> rcf [label=AND color=red]
+  
+
+    frh -> bhw [label=OR color=green]
+    swn -> bhw [label=OR color=green]
+  
+
+    htm -> kvt [label=AND color=red]
+    ndn -> kvt [label=AND color=red]
+  
+
+    x06 -> hbf [label=AND color=red]
+    y06 -> hbf [label=AND color=red]
+  
+
+    x35 -> kdv [label=XOR color=blue]
+    y35 -> kdv [label=XOR color=blue]
+  
+
+    srn -> bqr [label=AND color=red]
+    kth -> bqr [label=AND color=red]
+  
+
+    dgj -> bfb [label=AND color=red]
+    jwv -> bfb [label=AND color=red]
+  
+
+    bsn -> z32 [label=XOR color=blue]
+    jgg -> z32 [label=XOR color=blue]
+  
+
+    rjm -> tff [label=OR color=green]
+    skj -> tff [label=OR color=green]
+  
+
+    gcf -> mpv [label=AND color=red]
+    fhw -> mpv [label=AND color=red]
+  
+
+    vfb -> cqp [label=OR color=green]
+    jjp -> cqp [label=OR color=green]
+  
+
+    x00 -> z00 [label=XOR color=blue]
+    y00 -> z00 [label=XOR color=blue]
+  
+
+    crj -> shm [label=OR color=green]
+    fgc -> shm [label=OR color=green]
+  
+
+    tff -> z12 [label=XOR color=blue]
+    fgq -> z12 [label=XOR color=blue]
+  
+
+    mwj -> z37 [label=XOR color=blue]
+    qns -> z37 [label=XOR color=blue]
+  
+
+    vjg -> gkc [label=AND color=red]
+    kmg -> gkc [label=AND color=red]
+  
+
+    x19 -> dtb [label=XOR color=blue]
+    y19 -> dtb [label=XOR color=blue]
+  
+
+    hvs -> z18 [label=XOR color=blue]
+    tsn -> z18 [label=XOR color=blue]
+  
+
+    dtb -> z19 [label=XOR color=blue]
+    tsf -> z19 [label=XOR color=blue]
+  
+
+    y05 -> srp [label=AND color=red]
+    x05 -> srp [label=AND color=red]
+  
+
+    kkh -> kgw [label=AND color=red]
+    bsb -> kgw [label=AND color=red]
+  
+
+    rks -> htm [label=OR color=green]
+    trv -> htm [label=OR color=green]
+  
+
+    frn -> mgg [label=AND color=red]
+    ghf -> mgg [label=AND color=red]
+  
+
+    qjq -> z05 [label=XOR color=blue]
+    kbj -> z05 [label=XOR color=blue]
+  
+
+    knf -> z27 [label=XOR color=blue]
+    vgs -> z27 [label=XOR color=blue]
+  
+
+    y09 -> vmw [label=AND color=red]
+    x09 -> vmw [label=AND color=red]
+  
+
+    x36 -> dbc [label=AND color=red]
+    y36 -> dbc [label=AND color=red]
+  
+
+    knf -> wtd [label=AND color=red]
+    vgs -> wtd [label=AND color=red]
+  
+
+    y23 -> wwn [label=XOR color=blue]
+    x23 -> wwn [label=XOR color=blue]
+  
+
+    wnf -> z16 [label=XOR color=blue]
+    rsk -> z16 [label=XOR color=blue]
+  
+
+    y29 -> kkh [label=XOR color=blue]
+    x29 -> kkh [label=XOR color=blue]
+  
+
+    vjg -> z44 [label=XOR color=blue]
+    kmg -> z44 [label=XOR color=blue]
+  
+
+    htp -> dbv [label=OR color=green]
+    kgr -> dbv [label=OR color=green]
+  
+
+    htm -> z03 [label=XOR color=blue]
+    ndn -> z03 [label=XOR color=blue]
+  
+
+    rfq -> z13 [label=XOR color=blue]
+    tqf -> z13 [label=XOR color=blue]
+  
+
+    mjj -> nrs [label=AND color=red]
+    fqr -> nrs [label=AND color=red]
+  
+
+    gcf -> z07 [label=XOR color=blue]
+    fhw -> z07 [label=XOR color=blue]
+  
+
+    qmr -> frs [label=AND color=red]
+    wqr -> frs [label=AND color=red]
+  
+
+    x32 -> wtv [label=AND color=red]
+    y32 -> wtv [label=AND color=red]
+  
+
+    x07 -> gcf [label=XOR color=blue]
+    y07 -> gcf [label=XOR color=blue]
+  
+
+    gmf -> tsf [label=OR color=green]
+    pvh -> tsf [label=OR color=green]
+  
+
+    mjj -> z21 [label=XOR color=blue]
+    fqr -> z21 [label=XOR color=blue]
+  
+
+    qqs -> mwj [label=OR color=green]
+    dbc -> mwj [label=OR color=green]
+  
+
+    krp -> grg [label=OR color=green]
+    mpv -> grg [label=OR color=green]
+  
+
+    x34 -> vbp [label=AND color=red]
+    y34 -> vbp [label=AND color=red]
+  
+
+    tff -> hfb [label=AND color=red]
+    fgq -> hfb [label=AND color=red]
+  
+
+    drd -> rhr [label=AND color=red]
+    wkb -> rhr [label=AND color=red]
+  
+
+    tqf -> vkk [label=AND color=red]
+    rfq -> vkk [label=AND color=red]
+  
+
+    x13 -> knb [label=AND color=red]
+    y13 -> knb [label=AND color=red]
+  
+
+    bhw -> vvt [label=AND color=red]
+    fgv -> vvt [label=AND color=red]
+  
+
+    hhn -> qqs [label=AND color=red]
+    rwh -> qqs [label=AND color=red]
+  
+
+    kbj -> jcf [label=AND color=red]
+    qjq -> jcf [label=AND color=red]
+  
+
+    y41 -> wkh [label=XOR color=blue]
+    x41 -> wkh [label=XOR color=blue]
+  
+
+    y01 -> vfb [label=AND color=red]
+    x01 -> vfb [label=AND color=red]
+  
+
+    jgv -> mph [label=AND color=red]
+    dkh -> mph [label=AND color=red]
+  
+
+    gnp -> bsb [label=OR color=green]
+    jwb -> bsb [label=OR color=green]
+  
+
+    cdk -> gwm [label=OR color=green]
+    fjh -> gwm [label=OR color=green]
+  
+
+    prt -> kmg [label=OR color=green]
+    frs -> kmg [label=OR color=green]
+  
+
+    x17 -> fpd [label=XOR color=blue]
+    y17 -> fpd [label=XOR color=blue]
+  
+
+    y42 -> rtk [label=AND color=red]
+    x42 -> rtk [label=AND color=red]
+  
+
+    fpd -> tqm [label=AND color=red]
+    smg -> tqm [label=AND color=red]
+  
+
+    dbv -> gdw [label=AND color=red]
+    vhs -> gdw [label=AND color=red]
+  
+
+    y29 -> wms [label=AND color=red]
+    x29 -> wms [label=AND color=red]
+  
+
+    kkh -> z29 [label=XOR color=blue]
+    bsb -> z29 [label=XOR color=blue]
+  
+
+    cqp -> trv [label=AND color=red]
+    dqm -> trv [label=AND color=red]
+  
+
+    hvs -> gmf [label=AND color=red]
+    tsn -> gmf [label=AND color=red]
+  
+
+    wkq -> grv [label=AND color=red]
+    tfv -> grv [label=AND color=red]
+  
+
+    x04 -> ccq [label=AND color=red]
+    y04 -> ccq [label=AND color=red]
+  
+
+    x20 -> msw [label=XOR color=blue]
+    y20 -> msw [label=XOR color=blue]
+  
+
+    y26 -> fgv [label=XOR color=blue]
+    x26 -> fgv [label=XOR color=blue]
+  
+
+    mmr -> z14 [label=XOR color=blue]
+    qdc -> z14 [label=XOR color=blue]
+  
+
+    ghf -> z06 [label=XOR color=blue]
+    frn -> z06 [label=XOR color=blue]
+  
+
+    y26 -> wwt [label=AND color=red]
+    x26 -> wwt [label=AND color=red]
+  
+
+    sst -> jgg [label=OR color=green]
+    gdw -> jgg [label=OR color=green]
+  
+
+    pmn -> z41 [label=XOR color=blue]
+    wkh -> z41 [label=XOR color=blue]
+  
+
+    y04 -> wkb [label=XOR color=blue]
+    x04 -> wkb [label=XOR color=blue]
+  
+
+    y28 -> chk [label=XOR color=blue]
+    x28 -> chk [label=XOR color=blue]
+  
+
+    wqr -> z43 [label=XOR color=blue]
+    qmr -> z43 [label=XOR color=blue]
+  
+
+    kdv -> bcc [label=AND color=red]
+    stg -> bcc [label=AND color=red]
+  
+
+    y18 -> pvh [label=AND color=red]
+    x18 -> pvh [label=AND color=red]
+  
+
+    mvk -> z42 [label=XOR color=blue]
+    tkc -> z42 [label=XOR color=blue]
+  
+
+    x27 -> cks [label=AND color=red]
+    y27 -> cks [label=AND color=red]
+  
+
+    bjf -> pmn [label=OR color=green]
+    qkq -> pmn [label=OR color=green]
+  
+
+    tkc -> nrr [label=AND color=red]
+    mvk -> nrr [label=AND color=red]
+  
+
+    y38 -> gdk [label=XOR color=blue]
+    x38 -> gdk [label=XOR color=blue]
+  
+
+    y37 -> jpk [label=AND color=red]
+    x37 -> jpk [label=AND color=red]
+  
+
+    x23 -> twp [label=AND color=red]
+    y23 -> twp [label=AND color=red]
+  
+
+    tqm -> tsn [label=OR color=green]
+    bmp -> tsn [label=OR color=green]
+  
+
+    wkb -> z04 [label=XOR color=blue]
+    drd -> z04 [label=XOR color=blue]
+  
+
+    x42 -> mvk [label=XOR color=blue]
+    y42 -> mvk [label=XOR color=blue]
+  
+
+    y35 -> pnj [label=AND color=red]
+    x35 -> pnj [label=AND color=red]
+  
+
+    shm -> z11 [label=XOR color=blue]
+    tmd -> z11 [label=XOR color=blue]
+  
+
+    y24 -> fnh [label=XOR color=blue]
+    x24 -> fnh [label=XOR color=blue]
+  
+
+    x11 -> skj [label=AND color=red]
+    y11 -> skj [label=AND color=red]
+  
+
+    x10 -> fgc [label=AND color=red]
+    y10 -> fgc [label=AND color=red]
+  
+
+    srp -> frn [label=OR color=green]
+    jcf -> frn [label=OR color=green]
+  
+
+    y12 -> sqg [label=AND color=red]
+    x12 -> sqg [label=AND color=red]
+  
+
+    y18 -> hvs [label=XOR color=blue]
+    x18 -> hvs [label=XOR color=blue]
+  
+    }
+  
