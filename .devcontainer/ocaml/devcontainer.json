@@ -1,0 +1,14 @@
+{
+  "name": "OCaml AoC 2025",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ocamllabs.ocaml-platform"
+      ]
+    }
+  },
+  "postCreateCommand": "opam exec -- dune build"
+}
