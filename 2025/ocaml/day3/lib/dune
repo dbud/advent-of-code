@@ -1,0 +1,5 @@
+(library
+ (name lib_day3)
+ (modules parser solve1 solve2)
+ (libraries core angstrom)
+ (preprocess (pps ppx_jane)))
