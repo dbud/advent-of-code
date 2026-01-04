@@ -1,4 +1,6 @@
 .env
-input.txt
-
+.envrc
+input*.txt
+target
 .DS_Store
+.vscode

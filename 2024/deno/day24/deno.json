@@ -2,7 +2,7 @@
   "tasks": {
     "part1": "time deno run part1.ts <input.txt",
     "part2": "deno run --allow-write part2.ts <input.txt && cat graph.dot | dot -Tpdf >graph.pdf && open graph.pdf",
-    "bench": "deno bench --allow-read bench.ts"
+    "bench": "deno bench --allow-read --allow-write bench.ts"
   },
   "imports": {
     "@es-toolkit/es-toolkit": "jsr:@es-toolkit/es-toolkit@^1.29.0",

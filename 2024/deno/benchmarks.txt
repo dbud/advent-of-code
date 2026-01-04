@@ -108,3 +108,13 @@ benchmark     time/iter (avg)        iter/s      (min … max)           p75    
 day23 part1            3.8 ms         266.6 (  3.5 ms …   6.4 ms)   3.8 ms   5.7 ms   6.4 ms
 day23 part2           88.1 ms          11.3 ( 87.6 ms …  89.0 ms)  88.3 ms  89.0 ms  89.0 ms
 
+benchmark     time/iter (avg)        iter/s      (min … max)           p75      p99     p995
+------------- ----------------------------- --------------------- --------------------------
+day24 part1          662.0 µs         1,511 (603.8 µs …   1.2 ms) 666.0 µs 976.4 µs   1.0 ms
+day24 part2          295.8 µs         3,381 (254.9 µs … 934.4 µs) 296.5 µs 620.6 µs 671.0 µs
+
+benchmark     time/iter (avg)        iter/s      (min … max)           p75      p99     p995
+------------- ----------------------------- --------------------- --------------------------
+day25 part1            1.2 ms         821.8 (  1.1 ms …   1.6 ms)   1.3 ms   1.5 ms   1.5 ms
+day25 part2          894.9 µs         1,117 (784.8 µs …   1.1 ms) 955.3 µs   1.0 ms   1.0 ms
+
