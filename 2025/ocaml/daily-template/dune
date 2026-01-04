@@ -1,0 +1,17 @@
+(executable
+ (name part1)
+ (modules part1)
+ (libraries core lib__DAY)
+ (preprocess (pps ppx_jane)))
+
+(executable
+ (name part2)
+ (modules part2)
+ (libraries core lib__DAY)
+ (preprocess (pps ppx_jane)))
+
+ (test
+  (name tests)
+  (modules tests)
+  (libraries core lib__DAY)
+  (preprocess (pps ppx_jane)))

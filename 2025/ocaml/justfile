@@ -1,0 +1,17 @@
+create day:
+    cp -r daily-template/ {{day}}
+    sed -e 's/_DAY/{{day}}/g' -i '' {{day}}/dune
+    sed -e 's/_DAY/{{day}}/g' -i '' {{day}}/lib/dune
+    sed -e 's/_DAY/{{day}}/g' -i '' {{day}}/part1.ml
+    sed -e 's/_DAY/{{day}}/g' -i '' {{day}}/part2.ml
+    sed -e 's/_DAY/{{day}}/g' -i '' {{day}}/tests.ml
+    just get-input {{day}}
+
+get-input day:
+    deno run --allow-env --allow-read --allow-net get_input.ts {{day}} >{{day}}/input.txt
+
+test day:
+    cd {{day}} && dune test
+
+solve day part:
+    (cd {{day}} && dune exec ./{{part}}.exe)

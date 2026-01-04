@@ -1,0 +1,4 @@
+(lang dune 3.19)
+(name aoc2025)
+
+(authors "Dima Budaragin <d.budaragin@gmail.com>")
