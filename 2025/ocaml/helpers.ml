@@ -6,14 +6,9 @@ let run solver =
   let answer = solver input in
   Printf.printf "%s\n" answer
 
-let trim s = s
-  |> String.split_lines
-  |> List.map ~f:String.strip
-  |> String.concat ~sep:"\n"
-
 let test name f input expected =
   let test_fun () =
-    let actual = f (trim input) in
+    let actual = f input in
     let expected = expected in
     Alcotest.check string name expected actual
   in
