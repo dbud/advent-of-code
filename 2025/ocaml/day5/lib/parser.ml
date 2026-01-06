@@ -18,13 +18,10 @@ let ranges =
 let ids =
   many1 (int <* option '\n' newline)
 
-let input_parser =
+let ranges_and_ids =
   lift2
     (fun ranges ids -> (ranges, ids))
     (ranges <* newline)
     ids
 
-let parse input =
-  match parse_string ~consume:All input_parser input with
-  | Ok r -> r
-  | Error e -> failwith e
+let parse = Helpers.parse ranges_and_ids

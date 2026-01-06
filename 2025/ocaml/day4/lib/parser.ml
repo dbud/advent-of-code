@@ -12,7 +12,4 @@ let parse_grid =
   in
   loop 0 0 []
 
-let parse input =
-  match parse_string ~consume:All parse_grid input with
-  | Ok result -> result
-  | Error e -> failwith e
+let parse = Helpers.parse parse_grid
