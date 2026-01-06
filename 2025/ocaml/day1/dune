@@ -13,5 +13,5 @@
  (test
   (name tests)
   (modules tests)
-  (libraries core lib_day1)
+  (libraries core lib_day1 helpers)
   (preprocess (pps ppx_jane)))
