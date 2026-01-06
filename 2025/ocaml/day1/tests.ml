@@ -1,6 +1,3 @@
-open Helpers
-open Lib_day1
-
 let input = "L68
     L30
     R48
@@ -11,8 +8,7 @@ let input = "L68
     L99
     R14
     L82"
-
-let () = test_all "day1" [
+in Helpers.(test_all "day1" Lib_day1.[
   test "part1" Solve1.solve input "3";
   test "part2" Solve2.solve input "6"
-]
+])

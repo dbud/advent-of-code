@@ -1,6 +1,11 @@
 open Core
 open Alcotest
 
+let run solver =
+  let input = (In_channel.read_all "input.txt") in
+  let answer = solver input in
+  Printf.printf "%s\n" answer
+
 let trim s = s
   |> String.split_lines
   |> List.map ~f:String.strip
