@@ -1,4 +1,9 @@
 (* open Core *)
-(* open Angstrom *)
+open Angstrom
 
-let parse _input = ()
+let parser = return ()
+
+let parse input =
+  match parse_string ~consume:All parser input with
+  | Ok r -> r
+  | Error e -> failwith e
