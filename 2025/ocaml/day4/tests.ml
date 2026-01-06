@@ -1,48 +1,15 @@
-open Core
-open Lib_day4
-
-let run name f input expected =
-  let actual = f input in
-  if Stdlib.(actual <> expected) then (
-    Printf.eprintf
-      "%s failed\nexpected: %s\ngot:      %s\n\n"
-      name expected actual;
-    exit 1
-  ) else
-    Printf.printf "ok %s\n" name
-
-let trim s = s
-  |> String.split_lines
-  |> List.map ~f:String.strip
-  |> String.concat ~sep:"\n"
-
-let () =
-  run
-    "part1 test"
-    Solve1.solve
-    (trim "..@@.@@@@.
-    @@@.@.@.@@
-    @@@@@.@.@@
-    @.@@@@..@.
-    @@.@@@@.@@
-    .@@@@@@@.@
-    .@.@.@.@@@
-    @.@@@.@@@@
-    .@@@@@@@@.
-    @.@.@@@.@.")
-    "13";
-
-  run
-    "part2 test"
-    Solve2.solve
-    (trim "..@@.@@@@.
-    @@@.@.@.@@
-    @@@@@.@.@@
-    @.@@@@..@.
-    @@.@@@@.@@
-    .@@@@@@@.@
-    .@.@.@.@@@
-    @.@@@.@@@@
-    .@@@@@@@@.
-    @.@.@@@.@.")
-    "43";
+let input = "..@@.@@@@.
+@@@.@.@.@@
+@@@@@.@.@@
+@.@@@@..@.
+@@.@@@@.@@
+.@@@@@@@.@
+.@.@.@.@@@
+@.@@@.@@@@
+.@@@@@@@@.
+@.@.@@@.@."
+in
+Helpers.(test_all "day4" Lib_day4.[
+  test "part1" Solve1.solve input "13";
+  test "part2" Solve2.solve input "43";
+])
