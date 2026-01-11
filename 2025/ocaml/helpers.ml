@@ -25,3 +25,6 @@ let test name f input expected =
 
 let test_all day tests =
   Alcotest.run "AoC tests" [(day, tests)]
+
+let print_sexp sexp_of a =
+  printf "%s\n" (sexp_of a |> Sexp.to_string_hum)
